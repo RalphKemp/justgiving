@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Landing from './components/CardList';
+import Landing from './components/Landing';
 
 class App extends Component {
   render() {
