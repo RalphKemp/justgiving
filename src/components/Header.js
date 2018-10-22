@@ -10,12 +10,16 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Header = () => {
   return (
     <HeaderContainer>
       <img src={image} />
+      <p>Popular Charities</p>
     </HeaderContainer>
   );
 };
