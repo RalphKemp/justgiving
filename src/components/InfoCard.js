@@ -5,36 +5,40 @@ import { media } from '../helpers/sizing';
 const InfoCardContainer = styled.div`
   position: relative;
   background-color: #99e0bd;
-  width: 100%;
-  height: 100px;
+  height: auto;
   border-radius: 5px;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  margin-bottom: 55px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  font-size: 13px;
+  padding: 10px;
   ${media.tablet`
-      width: 50%;
+      width: 65%;
   `};
 `;
 
 const NameDiv = styled.div`
-  position: relative;
+  position: absolute;
   top: -50px;
-  text-align: center;
+  left: 60px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-
-  ${media.tablet`
-      text-align: left;
+  font-size: 23px;
+  margin-top: 18px;
+  ${media.mid`
+    left: 0px;
   `};
 `;
 
-const InfoCard = ({ charityName }) => {
+const CharityInfo = styled.div``;
+
+const InfoCard = ({ charityInfo }) => {
   return (
     <InfoCardContainer>
       <NameDiv>
-        <h3>{charityName}</h3>
+        <p>{charityInfo.name}</p>
       </NameDiv>
+      <CharityInfo>{charityInfo.description}</CharityInfo>
     </InfoCardContainer>
   );
 };

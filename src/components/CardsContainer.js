@@ -7,11 +7,10 @@ import DonationsCard from './DonationsCard';
 import { media } from '../helpers/sizing';
 
 const MainContainer = styled.div`
-  width: 80%;
+  width: 90%;
   div {
     display: flex;
     flex-direction: column;
-
     ${media.tablet`
       flex-direction: row;
     `};
@@ -32,12 +31,12 @@ class CardsContainer extends Component {
 
   render() {
     const { charity, donations } = this.props;
-    console.log(charity.themeColour);
+    console.log(donations);
     return (
-      <MainContainer class="heyhe">
+      <MainContainer>
         {this.state.loaded ? (
           <div>
-            <InfoCard charityName={charity.name} />
+            <InfoCard charityInfo={charity} />
             <DonationsCard donations={donations} />
           </div>
         ) : null}
