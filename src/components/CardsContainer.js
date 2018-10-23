@@ -11,7 +11,6 @@ const MainContainer = styled.div`
   div {
     display: flex;
     flex-direction: column;
-
     ${media.tablet`
       flex-direction: row;
     `};
@@ -37,7 +36,7 @@ class CardsContainer extends Component {
       <MainContainer>
         {this.state.loaded ? (
           <div>
-            <InfoCard charityName={charity.name} />
+            <InfoCard charityInfo={charity} />
             <DonationsCard donations={donations} />
           </div>
         ) : null}

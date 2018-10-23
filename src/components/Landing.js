@@ -16,7 +16,6 @@ const LandingContainer = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -28,6 +27,10 @@ const ContentContainer = styled.div`
   ${media.mid`
       align-items: flex-start;
       margin: 0px;
+      width: 550px;
+  `};
+  ${media.tablet`
+      width: 1000px;
   `};
 `;
 
