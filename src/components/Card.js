@@ -6,8 +6,7 @@ import InfoCard from './InfoCard';
 import DonationsCard from './DonationsCard';
 
 const CardContainer = styled.div`
-  width: 800px;
-  height: 500px;
+
   background-color: white;
   div {
     display: flex;
@@ -32,8 +31,7 @@ class Card extends Component {
       <CardContainer>
         {this.state.loaded ? (
           <div>
-            <InfoCard charityName={charity.name} />
-            <DonationsCard donations={donations} />
+
           </div>
         ) : null}
       </CardContainer>

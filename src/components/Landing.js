@@ -18,8 +18,9 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  height: 70%;
+  width: 300px;
+  height: 400px;
+  position: relative;
 `;
 
 const Landing = () => {
