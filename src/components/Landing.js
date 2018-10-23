@@ -1,5 +1,5 @@
 import React from "react";
-import CardList from "./CardList";
+import Card from "./Card";
 import Header from "./Header";
 import styled from "styled-components";
 
@@ -17,7 +17,7 @@ const Landing = () => {
   return (
     <LandingContainer>
       <Header />
-      <CardList />
+      <Card />
     </LandingContainer>
   );
 };
