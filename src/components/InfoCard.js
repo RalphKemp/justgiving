@@ -10,7 +10,7 @@ const InfoCardContainer = styled.div`
 const InfoCard = ({ charityName }) => {
   return (
     <InfoCardContainer>
-      the charit name is {charityName}
+      the charity name is {charityName}
     </InfoCardContainer>
   );
 }
