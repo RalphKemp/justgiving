@@ -4,16 +4,21 @@ import * as actions from '../actions';
 import { connect } from 'react-redux';
 import InfoCard from './InfoCard';
 import DonationsCard from './DonationsCard';
+import { media } from '../helpers/sizing';
 
-const CardContainer = styled.div`
-
-  background-color: white;
+const MainContainer = styled.div`
+  width: 80%;
   div {
     display: flex;
+    flex-direction: column;
+
+    ${media.tablet`
+      flex-direction: row;
+    `};
   }
 `;
 
-class Card extends Component {
+class CardsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { loaded: false };
@@ -25,21 +30,19 @@ class Card extends Component {
     await this.setState({ loaded: true });
   }
 
-  renderCards() {
+  render() {
     const { charity, donations } = this.props;
+    console.log(charity.themeColour);
     return (
-      <CardContainer>
+      <MainContainer class="heyhe">
         {this.state.loaded ? (
           <div>
-
+            <InfoCard charityName={charity.name} />
+            <DonationsCard donations={donations} />
           </div>
         ) : null}
-      </CardContainer>
+      </MainContainer>
     );
-  }
-
-  render() {
-    return <div>{this.renderCards()}</div>;
   }
 }
 
@@ -50,4 +53,4 @@ function mapStateToProps({ charity, donations }) {
 export default connect(
   mapStateToProps,
   actions
-)(Card);
+)(CardsContainer);
