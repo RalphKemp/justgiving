@@ -19,22 +19,29 @@ const InfoCardContainer = styled.div`
 
 const NameDiv = styled.div`
   position: relative;
-  top: -50px;
+  top: -60px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-
+  font-size: 23px;
+  margin-top: 8px;
   ${media.tablet`
       text-align: left;
   `};
 `;
 
+const CharityInfo = styled.div`
+
+`
+
 const InfoCard = ({ charityName }) => {
   return (
     <InfoCardContainer>
       <NameDiv>
-        <h3>{charityName}</h3>
+        <p>{charityName}</p>
       </NameDiv>
+      <CharityInfo>
+      </CharityInfo>
     </InfoCardContainer>
   );
 };

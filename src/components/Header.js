@@ -13,8 +13,8 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 41px;
+  margin-bottom: 20px;
   img {
     width: 245px;
   }
