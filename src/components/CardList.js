@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import * as actions from '../actions';
+import { connect } from 'react-redux';
 
 const CardListContainer = styled.div`
   width: 500px;
@@ -8,9 +10,23 @@ const CardListContainer = styled.div`
 `;
 
 class CardList extends Component {
+
+  async componentDidMount() {
+    await this.props.fetchCharity();
+    await console.log(this.props.charity)
+  }
+
+
   render() {
     return <CardListContainer />;
   }
 }
 
-export default CardList;
+function mapStateToProps({ charity }) {
+  return { charity };
+}
+
+export default connect(
+  mapStateToProps,
+  actions
+)(CardList);
