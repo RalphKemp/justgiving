@@ -4,16 +4,12 @@ import { RotateLoader } from 'react-spinners';
 import { media } from '../helpers/sizing';
 
 const StyledLoader = styled.div`
+  width: 50vw;
+  height: 50vh;
   position: absolute;
-  top: -80px;
-  left: 45%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ${media.mid`
-    top: -55%;
-  `};
+  z-index: 1000;
+  top: 50%;
+  left: 46%;
 `;
 
 class MyCodeLoader extends Component {

@@ -11,7 +11,6 @@ const HeaderContainer = styled.div`
   display: flex;
   position: absolute;
   top: -90px;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   img {
@@ -23,9 +22,9 @@ const HeaderContainer = styled.div`
     align-items: flex-start;
   `};
   ${media.tablet`
-    align-items: flex-start;
     width: 1000px;
     top: -84px;
+    justify-content: flex-start;
   `};
 `;
 

@@ -39,7 +39,7 @@ const Landing = () => {
   return (
     <LandingContainer>
       <ContentContainer>
-      <Header />
+
         <CardsContainer />
       </ContentContainer>
     </LandingContainer>
