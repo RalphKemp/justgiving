@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../helpers/sizing';
+import MyCodeLoader from '../helpers/contentLoader';
 
 const InfoCardContainer = styled.div`
   position: relative;
@@ -35,10 +36,12 @@ const CharityInfo = styled.div``;
 const InfoCard = ({ charityInfo }) => {
   return (
     <InfoCardContainer>
-      <NameDiv>
-        <p>{charityInfo.name}</p>
-      </NameDiv>
-      <CharityInfo>{charityInfo.description}</CharityInfo>
+      <div>
+        <NameDiv>
+          <p>{charityInfo.name}</p>
+        </NameDiv>
+        <CharityInfo>{charityInfo.description}</CharityInfo>
+      </div>
     </InfoCardContainer>
   );
 };

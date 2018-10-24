@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import InfoCard from './InfoCard';
 import DonationsCard from './DonationsCard';
 import { media } from '../helpers/sizing';
+import MyCodeLoader from '../helpers/contentLoader';
 
 const MainContainer = styled.div`
   width: 90%;
@@ -39,7 +40,7 @@ class CardsContainer extends Component {
             <InfoCard charityInfo={charity} />
             <DonationsCard donations={donations} />
           </div>
-        ) : null}
+        ) : <MyCodeLoader />}
       </MainContainer>
     );
   }
