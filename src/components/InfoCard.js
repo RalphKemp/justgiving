@@ -32,7 +32,22 @@ const NameDiv = styled.div`
   `};
 `;
 
-const CharityInfo = styled.div``;
+const InfoBox = styled.div`
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: fit-content;
+`;
+
+const CharityInfo = styled.div`
+  display: flex;
+  flex-direction: column !important;
+`;
+
+const SiteLinks = styled.div`
+
+`;
 
 const InfoCard = ({ charityInfo }) => {
   return (
@@ -41,7 +56,16 @@ const InfoCard = ({ charityInfo }) => {
         <NameDiv>
           <p>{charityInfo.name}</p>
         </NameDiv>
-        <CharityInfo>{charityInfo.description}</CharityInfo>
+        <CharityInfo>
+          <InfoBox>{charityInfo.description}</InfoBox>
+          <InfoBox>{charityInfo.logoAbsoluteUrl}</InfoBox>
+          <InfoBox>{charityInfo.thankyouMessage}</InfoBox>
+          <SiteLinks>
+            <InfoBox><a href={charityInfo.profilePageUrl}>{charityInfo.profilePageUrl}</a></InfoBox>
+            <InfoBox><a href={charityInfo.websiteUrl}>{charityInfo.websiteUrl}</a></InfoBox>
+          </SiteLinks>
+          <InfoBox><a href={"mailto:"+charityInfo.emailAddress}>{charityInfo.emailAddress}</a></InfoBox>
+        </CharityInfo>
       </div>
     </InfoCardContainer>
   );

@@ -27,7 +27,7 @@ class MyCodeLoader extends Component {
       <StyledLoader className="ref">
         <RotateLoader
           sizeUnit={'px'}
-          size={25}
+          size={20}
           color={'#747474'}
           loading={this.state.loading}
         />
