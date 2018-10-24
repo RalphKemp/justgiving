@@ -24,7 +24,7 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 300px;
+  width: 350px;
   height: auto;
   min-height: 400px;
   margin: 120px 0px;
