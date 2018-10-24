@@ -14,7 +14,7 @@ const HeaderContainer = styled.div`
   left: 4px;
   align-items: center;
   justify-content: center;
-  img {
+  > img {
     width: 245px;
   }
   ${media.mid`

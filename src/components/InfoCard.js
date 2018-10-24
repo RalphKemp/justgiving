@@ -5,7 +5,7 @@ import MyCodeLoader from '../helpers/contentLoader';
 
 const InfoCardContainer = styled.div`
   position: relative;
-  background-color: #99e0bd;
+  background: linear-gradient(#ffffff, #00772d);
   box-shadow: rgb(93, 93, 93) 0px 2px 7px -1px;
   height: auto;
   border-radius: 5px;
@@ -62,6 +62,25 @@ const CharityInfo = styled.div`
   overflow: hidden;
 `;
 
+const DescImage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 50px;
+    ${media.mid`
+      justify-content: flex-start;
+  `};
+  }
+  ${media.mid`
+      width: 100%;
+      justify-content: flex-start;
+  `};
+  ${media.tablet`
+      width: 100%;
+  `};
+`;
+
 const SiteLinks = styled.div`
   position: absolute;
   bottom: 10px;
@@ -72,7 +91,8 @@ const SiteLinks = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center ${media.mid`
+  text-align: center;
+  ${media.mid`
       flex-direction: row;
       width: 100%;
       justify-content: flex-start;
@@ -111,8 +131,11 @@ const InfoCard = ({ charityInfo }) => {
           <p>{charityInfo.name}</p>
         </NameDiv>
         <CharityInfo>
-          <InfoBox>{charityInfo.description}</InfoBox>
-          <InfoBox>{charityInfo.logoAbsoluteUrl}</InfoBox>
+          <DescImage>
+            <img src={charityInfo.logoAbsoluteUrl} />
+            <InfoBox>{charityInfo.description}</InfoBox>
+          </DescImage>
+
           <InfoBox>{charityInfo.thankyouMessage}</InfoBox>
 
           <SiteLinks>
