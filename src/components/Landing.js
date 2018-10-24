@@ -33,6 +33,9 @@ const ContentContainer = styled.div`
   ${media.tablet`
       width: 1000px;
   `};
+  ${media.desktop`
+      width: 1200px;
+  `};
 `;
 
 const Landing = () => {

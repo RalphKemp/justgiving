@@ -12,7 +12,6 @@ const InfoCardContainer = styled.div`
   margin-bottom: 55px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 13px;
   padding: 10px;
   ${media.tablet`
       width: 65%;
@@ -39,6 +38,13 @@ const InfoBox = styled.div`
   margin: 5px;
   width: fit-content;
   overflow: hidden;
+  font-size: 12px;
+  ${media.tablet`
+      font-size: 13px;
+  `};
+  ${media.desktop`
+      font-size: 14px;
+  `};
 `;
 
 const CharityInfo = styled.div`
@@ -47,9 +53,7 @@ const CharityInfo = styled.div`
   overflow: hidden;
 `;
 
-const SiteLinks = styled.div`
-
-`;
+const SiteLinks = styled.div``;
 
 const InfoCard = ({ charityInfo }) => {
   return (
@@ -63,10 +67,20 @@ const InfoCard = ({ charityInfo }) => {
           <InfoBox>{charityInfo.logoAbsoluteUrl}</InfoBox>
           <InfoBox>{charityInfo.thankyouMessage}</InfoBox>
           <SiteLinks>
-            <InfoBox><a href={charityInfo.profilePageUrl}>{charityInfo.profilePageUrl}</a></InfoBox>
-            <InfoBox><a href={charityInfo.websiteUrl}>{charityInfo.websiteUrl}</a></InfoBox>
+            <InfoBox>
+              <a href={charityInfo.profilePageUrl}>
+                {charityInfo.profilePageUrl}
+              </a>
+            </InfoBox>
+            <InfoBox>
+              <a href={charityInfo.websiteUrl}>{charityInfo.websiteUrl}</a>
+            </InfoBox>
           </SiteLinks>
-          <InfoBox><a href={"mailto:"+charityInfo.emailAddress}>{charityInfo.emailAddress}</a></InfoBox>
+          <InfoBox>
+            <a href={'mailto:' + charityInfo.emailAddress}>
+              {charityInfo.emailAddress}
+            </a>
+          </InfoBox>
         </CharityInfo>
       </div>
     </InfoCardContainer>

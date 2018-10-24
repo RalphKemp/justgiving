@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { media } from '../helpers/sizing';
 import uuidv1 from 'uuid/v1';
-import dateFormat from "dateformat";
+import dateFormat from 'dateformat';
 
 const DonationsCardContainer = styled.div`
   position: relative;
-  background-color: rgb(0, 119, 45);
+  background-color: #ced2d0;
+  box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
   width: 100%;
   margin-top: 10px;
   height: auto;
@@ -15,11 +16,14 @@ const DonationsCardContainer = styled.div`
   font-weight: 400;
   color: white;
   display: flex;
-  flex-direction: column !important;
+  flex-direction: column;
   padding-bottom: 15px;
   ${media.tablet`
       width: 40%;
       margin-left: 17px;
+  `};
+  ${media.desktop`
+      width: 45%;
   `};
 `;
 
@@ -40,19 +44,42 @@ const DonationsHeader = styled.div`
 
 const AllDonations = styled.div`
   display: flex;
-  flex-direction: column !important;
+  flex-direction: column;
 `;
 
 const IndividualDonation = styled.div`
   font-size: 12px;
   background-color: white;
   color: black;
-  margin: 5px;
-  border-radius: 10px;
-  padding: 5px;
+  margin: 10px 10px 2px 10px;
+  border-radius: 5px;
+  padding: 10px;
   overflow: hidden;
+  box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
+  ${media.tablet`
+      font-size: 13px;
+  `};
+  ${media.desktop`
+      font-size: 14px;
+  `};
+  > div {
+    margin: 5px;
+  }
 `;
 
+const SubDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const DonationInfo = styled(SubDiv)`
+  font-size: 16px;
+  font-weight: 500;
+`;
+
+const DonationMessage = styled(SubDiv)`
+  font-style: italic;
+`;
 // for some reason date from api is coming back weird, so have to substr()
 
 const DonationsCard = ({ donations }) => {
@@ -67,13 +94,13 @@ const DonationsCard = ({ donations }) => {
           const donationDate = new Date(parseInt(time)).toString();
           return (
             <IndividualDonation key={uuidv1()}>
-              {dateFormat(donationDate, "dddd, mmmm dS, yyyy, h:MM:ss TT")}
-              <br />
-              {donation.donorDisplayName} donated £{donation.amount}
-              <br />
-              {donation.message}
-              <br />
-              {donation.imageUrl}
+              <SubDiv>
+                {dateFormat(donationDate, 'dddd, mmmm dS, yyyy, h:MM:ss TT')}
+              </SubDiv>
+              <DonationInfo>
+                {donation.donorDisplayName} donated £{donation.amount}
+              </DonationInfo>
+              <DonationMessage><p> - "{donation.message}"</p></DonationMessage>
             </IndividualDonation>
           );
         })}
