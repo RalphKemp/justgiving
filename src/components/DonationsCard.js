@@ -7,8 +7,7 @@ import dateFormat from 'dateformat';
 const DonationsCardContainer = styled.div`
   position: relative;
   background-color: #ced2d0;
-  box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
-  width: 100%;
+  box-shadow: rgb(93, 93, 93) 0px 2px 7px -1px;
   margin-top: 10px;
   height: auto;
   border-radius: 5px;
@@ -17,6 +16,7 @@ const DonationsCardContainer = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
   padding-bottom: 15px;
   ${media.tablet`
       width: 40%;
@@ -34,7 +34,7 @@ const DonationsHeader = styled.div`
   position: absolute;
   margin-top: 18px;
   top: -50px;
-  left: 75px;
+  left: 15%;
   color: black;
   font-size: 23px;
   ${media.mid`
@@ -86,7 +86,7 @@ const DonationsCard = ({ donations }) => {
   return (
     <DonationsCardContainer>
       <DonationsHeader>
-        <p>Donations</p>
+        <p>Recent Donations</p>
       </DonationsHeader>
       <AllDonations>
         {donations.donations.map(donation => {
@@ -100,7 +100,9 @@ const DonationsCard = ({ donations }) => {
               <DonationInfo>
                 {donation.donorDisplayName} donated £{donation.amount}
               </DonationInfo>
-              <DonationMessage><p> - "{donation.message}"</p></DonationMessage>
+              <DonationMessage>
+                <p> - "{donation.message}"</p>
+              </DonationMessage>
             </IndividualDonation>
           );
         })}

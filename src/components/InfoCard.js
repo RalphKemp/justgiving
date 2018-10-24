@@ -6,15 +6,21 @@ import MyCodeLoader from '../helpers/contentLoader';
 const InfoCardContainer = styled.div`
   position: relative;
   background-color: #99e0bd;
+  box-shadow: rgb(93, 93, 93) 0px 2px 7px -1px;
   height: auto;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 55px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  padding: 10px;
+  padding: 10px 10px 120px 10px;
   ${media.tablet`
       width: 65%;
+      padding: 10px;
+      margin-right: 5px;
+  `};
+   ${media.desktop`
+      margin-right: 10px;
   `};
 `;
 
@@ -37,13 +43,16 @@ const InfoBox = styled.div`
   padding: 5px;
   margin: 5px;
   width: fit-content;
+  box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
   overflow: hidden;
   font-size: 12px;
   ${media.tablet`
       font-size: 13px;
+      padding: 10px;
   `};
   ${media.desktop`
       font-size: 14px;
+      padding: 13px;
   `};
 `;
 
@@ -53,7 +62,45 @@ const CharityInfo = styled.div`
   overflow: hidden;
 `;
 
-const SiteLinks = styled.div``;
+const SiteLinks = styled.div`
+  position: absolute;
+  bottom: 10px;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center
+  ${media.mid`
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-start;
+  `};
+`;
+
+const SubSiteLink = styled(InfoBox)`
+  width: 80%;
+  height: 15px;
+  opacity: 0.9;
+  a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+  :hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+   ${media.mid`
+      width: fit-content;
+      padding-left: 8px;
+      a {
+        font-size: 13px;
+      }
+  }
+  `};
+`;
 
 const InfoCard = ({ charityInfo }) => {
   return (
@@ -66,21 +113,21 @@ const InfoCard = ({ charityInfo }) => {
           <InfoBox>{charityInfo.description}</InfoBox>
           <InfoBox>{charityInfo.logoAbsoluteUrl}</InfoBox>
           <InfoBox>{charityInfo.thankyouMessage}</InfoBox>
+
           <SiteLinks>
-            <InfoBox>
+            <SubSiteLink>
               <a href={charityInfo.profilePageUrl}>
-                {charityInfo.profilePageUrl}
+                View charity page
               </a>
-            </InfoBox>
-            <InfoBox>
-              <a href={charityInfo.websiteUrl}>{charityInfo.websiteUrl}</a>
-            </InfoBox>
+            </SubSiteLink>
+            <SubSiteLink>
+              <a href={charityInfo.websiteUrl}>Visit site</a>
+            </SubSiteLink>
+            <SubSiteLink>
+              <a href={'mailto:' + charityInfo.emailAddress}>contact</a>
+            </SubSiteLink>
           </SiteLinks>
-          <InfoBox>
-            <a href={'mailto:' + charityInfo.emailAddress}>
-              {charityInfo.emailAddress}
-            </a>
-          </InfoBox>
+
         </CharityInfo>
       </div>
     </InfoCardContainer>

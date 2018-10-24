@@ -27,10 +27,11 @@ const ContentContainer = styled.div`
   margin: 120px 0px;
   position: relative;
   ${media.mid`
-      align-items: flex-start;
+      align-items: center;
       width: 550px;
   `};
   ${media.tablet`
+      align-items: flex-start;
       width: 1000px;
   `};
   ${media.desktop`
