@@ -25,6 +25,7 @@ const HeaderContainer = styled.div`
   ${media.tablet`
     width: 1000px;
     top: -84px;
+    left: -2px;
     justify-content: flex-start;
   `};
 `;

@@ -11,7 +11,7 @@ import Header from './Header';
 
 const MainContainer = styled.div`
   width: 90%;
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     ${media.tablet`
