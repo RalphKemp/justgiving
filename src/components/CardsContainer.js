@@ -26,6 +26,13 @@ class CardsContainer extends Component {
     this.state = { loaded: false };
   }
 
+  // when component mounts we fetch both the Charity information and it's donations.
+  // once this data is fetched we then set the state loaded to true. In our render method
+  // if the state is loaded, we have a transition which fades the cards in, else there's
+  // a react spinner, which is imported in from MyCodeLoader helper.
+
+  // From our mapStateToProps function we now can store that data as props, and pass them
+  // to our function components, InfoCard and DonationsCard.
   async componentDidMount() {
     await this.props.fetchCharity();
     await this.props.fetchCharityDonations();

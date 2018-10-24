@@ -1,5 +1,8 @@
 import { css } from 'styled-components';
 
+// very useful helper for responsive design in conjunction with styled components,
+// - being used via min-width.
+
 export const sizes = {
   desktop: 1439,
   tablet: 1022,

@@ -8,7 +8,7 @@ const LandingContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
   height: auto;
-  background: linear-gradient(#ffffff, #f5f5f5);
+  background: linear-gradient(#ffffff, #b52fbd0a);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,12 +16,15 @@ const LandingContainer = styled.div`
   position: relative;
 `;
 
+// ContentContainer used as a useful guide for responsive design.
+// - is used as a basic basis for the main widths of content.
+
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 300px;
+  width: 350px;
   height: auto;
   min-height: 400px;
   margin: 120px 0px;
@@ -43,7 +46,6 @@ const Landing = () => {
   return (
     <LandingContainer>
       <ContentContainer>
-
         <CardsContainer />
       </ContentContainer>
     </LandingContainer>
