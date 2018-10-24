@@ -40,7 +40,9 @@ class CardsContainer extends Component {
             <InfoCard charityInfo={charity} />
             <DonationsCard donations={donations} />
           </div>
-        ) : <MyCodeLoader />}
+        ) : (
+          <MyCodeLoader />
+        )}
       </MainContainer>
     );
   }

@@ -1,23 +1,18 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { BeatLoader } from "react-spinners";
-import { media } from "../helpers/sizing";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { RotateLoader } from 'react-spinners';
+import { media } from '../helpers/sizing';
 
 const StyledLoader = styled.div`
-  width: 100vw;
-  position: relative;
-  height: 33vh;
+  position: absolute;
+  top: -80px;
+  left: 45%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
-  margin-top: -10px;
-  margin-left: -10px;
-  ${media.tablet`
-    height: 100vh;
-    width: 50vw;
-    position: absolute;
-    top: 0px;
+  ${media.mid`
+    top: -55%;
   `};
 `;
 
@@ -30,10 +25,10 @@ class MyCodeLoader extends Component {
   render() {
     return (
       <StyledLoader className="ref">
-        <BeatLoader
-          sizeUnit={"px"}
+        <RotateLoader
+          sizeUnit={'px'}
           size={25}
-          color={"#747474"}
+          color={'#747474'}
           loading={this.state.loading}
         />
       </StyledLoader>
@@ -42,3 +37,4 @@ class MyCodeLoader extends Component {
 }
 
 export default MyCodeLoader;
+//

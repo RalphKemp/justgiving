@@ -8,6 +8,7 @@ const InfoCardContainer = styled.div`
   background-color: #99e0bd;
   height: auto;
   border-radius: 5px;
+  margin-top: 10px;
   margin-bottom: 55px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
