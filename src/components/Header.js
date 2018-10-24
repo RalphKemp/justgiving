@@ -11,6 +11,7 @@ const HeaderContainer = styled.div`
   display: flex;
   position: absolute;
   top: -90px;
+  left: 4px;
   align-items: center;
   justify-content: center;
   img {

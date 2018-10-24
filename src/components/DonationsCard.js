@@ -29,7 +29,7 @@ const DonationsHeader = styled.div`
   position: absolute;
   margin-top: 18px;
   top: -50px;
-  left: 70px;
+  left: 75px;
   color: black;
   font-size: 23px;
   ${media.mid`
