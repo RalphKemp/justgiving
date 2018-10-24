@@ -11,7 +11,7 @@ const DonationsCardContainer = styled.div`
   margin-top: 10px;
   height: auto;
   border-radius: 5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   color: white;
   display: flex;
@@ -31,11 +31,11 @@ const DonationsCardContainer = styled.div`
 // InfoCard header.
 
 const DonationsHeader = styled.div`
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   font-size: 20px;
   position: absolute;
-  margin-top: 18px;
+  margin-top: 15px;
   top: -50px;
   left: 15%;
   color: black;

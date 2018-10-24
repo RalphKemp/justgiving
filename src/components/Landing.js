@@ -24,7 +24,7 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 350px;
+  width: 310px;
   height: auto;
   min-height: 400px;
   margin: 120px 0px;
@@ -34,7 +34,6 @@ const ContentContainer = styled.div`
       width: 550px;
   `};
   ${media.tablet`
-      align-items: flex-start;
       width: 1000px;
   `};
   ${media.desktop`
