@@ -19,7 +19,7 @@ const InfoCardContainer = styled.div`
       padding: 10px;
       margin-right: 5px;
   `};
-   ${media.desktop`
+  ${media.desktop`
       margin-right: 10px;
   `};
 `;
@@ -72,8 +72,7 @@ const SiteLinks = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center
-  ${media.mid`
+  text-align: center ${media.mid`
       flex-direction: row;
       width: 100%;
       justify-content: flex-start;
@@ -92,7 +91,7 @@ const SubSiteLink = styled(InfoBox)`
     cursor: pointer;
     opacity: 1;
   }
-   ${media.mid`
+  ${media.mid`
       width: fit-content;
       padding-left: 8px;
       a {
@@ -118,9 +117,7 @@ const InfoCard = ({ charityInfo }) => {
 
           <SiteLinks>
             <SubSiteLink>
-              <a href={charityInfo.profilePageUrl}>
-                View charity page
-              </a>
+              <a href={charityInfo.profilePageUrl}>View charity page</a>
             </SubSiteLink>
             <SubSiteLink>
               <a href={charityInfo.websiteUrl}>Visit site</a>
@@ -129,7 +126,6 @@ const InfoCard = ({ charityInfo }) => {
               <a href={'mailto:' + charityInfo.emailAddress}>contact</a>
             </SubSiteLink>
           </SiteLinks>
-
         </CharityInfo>
       </div>
     </InfoCardContainer>
