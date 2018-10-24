@@ -38,11 +38,13 @@ const InfoBox = styled.div`
   padding: 5px;
   margin: 5px;
   width: fit-content;
+  overflow: hidden;
 `;
 
 const CharityInfo = styled.div`
   display: flex;
   flex-direction: column !important;
+  overflow: hidden;
 `;
 
 const SiteLinks = styled.div`

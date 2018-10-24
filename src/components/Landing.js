@@ -28,7 +28,6 @@ const ContentContainer = styled.div`
   position: relative;
   ${media.mid`
       align-items: flex-start;
-      margin: 0px;
       width: 550px;
   `};
   ${media.tablet`
