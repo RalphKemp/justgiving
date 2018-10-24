@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../helpers/sizing';
-import uuidv1 from "uuid/v1";
+import uuidv1 from 'uuid/v1';
+import dateFormat from "dateformat";
 
 const DonationsCardContainer = styled.div`
   position: relative;
@@ -17,7 +18,7 @@ const DonationsCardContainer = styled.div`
   flex-direction: column !important;
   padding-bottom: 15px;
   ${media.tablet`
-      width: 35%;
+      width: 40%;
       margin-left: 17px;
   `};
 `;
@@ -52,6 +53,8 @@ const IndividualDonation = styled.div`
   overflow: hidden;
 `;
 
+// for some reason date from api is coming back weird, so have to substr()
+
 const DonationsCard = ({ donations }) => {
   return (
     <DonationsCardContainer>
@@ -60,12 +63,16 @@ const DonationsCard = ({ donations }) => {
       </DonationsHeader>
       <AllDonations>
         {donations.donations.map(donation => {
+          const time = donation.donationDate.substr(6, 13);
+          const donationDate = new Date(parseInt(time)).toString();
           return (
             <IndividualDonation key={uuidv1()}>
-              {donation.amount}
-              {donation.donationDate}
-              {donation.donorDisplayName}
+              {dateFormat(donationDate, "dddd, mmmm dS, yyyy, h:MM:ss TT")}
+              <br />
+              {donation.donorDisplayName} donated £{donation.amount}
+              <br />
               {donation.message}
+              <br />
               {donation.imageUrl}
             </IndividualDonation>
           );
