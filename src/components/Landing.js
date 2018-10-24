@@ -16,6 +16,9 @@ const LandingContainer = styled.div`
   position: relative;
 `;
 
+// ContentContainer used as a useful guide for responsive design.
+// - is used as a basic basis for the main widths of content.
+
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,7 +46,6 @@ const Landing = () => {
   return (
     <LandingContainer>
       <ContentContainer>
-
         <CardsContainer />
       </ContentContainer>
     </LandingContainer>

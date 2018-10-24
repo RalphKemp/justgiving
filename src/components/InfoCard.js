@@ -102,6 +102,8 @@ const SubSiteLink = styled(InfoBox)`
   `};
 `;
 
+// CharityInfo passed as props, various data being used, not all of it nessecary.
+
 const InfoCard = ({ charityInfo }) => {
   return (
     <InfoCardContainer>

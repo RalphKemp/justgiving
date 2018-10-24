@@ -27,6 +27,9 @@ const DonationsCardContainer = styled.div`
   `};
 `;
 
+// donations header is absolute outside of parent div, to match
+// InfoCard header.
+
 const DonationsHeader = styled.div`
   font-weight: 500;
   text-align: center;
@@ -80,7 +83,10 @@ const DonationInfo = styled(SubDiv)`
 const DonationMessage = styled(SubDiv)`
   font-style: italic;
 `;
-// for some reason date from api is coming back weird, so have to substr()
+// with donations passed as props, we can map each donation to an IndividualDonation
+// div. I couldn't figure out why the donationDate was coming back as a different string
+// from the json data, so here I have to subStr() and then parse that in a new Date object.
+// it's then passed into dateFormat to make it look nicer.
 
 const DonationsCard = ({ donations }) => {
   return (

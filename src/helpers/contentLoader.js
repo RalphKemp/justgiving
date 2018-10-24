@@ -12,6 +12,9 @@ const StyledLoader = styled.div`
   left: 46%;
 `;
 
+// Basic React spinner to be rendered when content is loading. Very useful when the
+// api's server is being rather slow - indicates that somethings actually happening!
+
 class MyCodeLoader extends Component {
   constructor(props) {
     super(props);
@@ -33,4 +36,4 @@ class MyCodeLoader extends Component {
 }
 
 export default MyCodeLoader;
-//
+
