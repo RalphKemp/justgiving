@@ -3,9 +3,11 @@ import styled from 'styled-components';
 import { media } from '../helpers/sizing';
 import MyCodeLoader from '../helpers/contentLoader';
 
+// background: linear-gradient(#ffffff, #00772d);
+
 const InfoCardContainer = styled.div`
   position: relative;
-  background: linear-gradient(#ffffff, #00772d);
+  background: linear-gradient(#d4d7d5, #00772d38);
   box-shadow: rgb(93, 93, 93) 0px 2px 7px -1px;
   height: auto;
   border-radius: 5px;
@@ -13,7 +15,7 @@ const InfoCardContainer = styled.div`
   margin-bottom: 55px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  padding: 10px 10px 120px 10px;
+  padding: 10px 10px 20px 10px;
   ${media.tablet`
       width: 65%;
       padding: 10px;
@@ -31,21 +33,22 @@ const NameDiv = styled.div`
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 23px;
-  margin-top: 18px;
+  margin-top: 10px;
   ${media.mid`
     left: 0px;
+    margin-top: 18px;
   `};
 `;
 
 const InfoBox = styled.div`
   background-color: white;
   border-radius: 5px;
-  padding: 5px;
+  padding: 9px;
   margin: 5px;
   width: fit-content;
   box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
   overflow: hidden;
-  font-size: 12px;
+  font-size: 13px;
   ${media.tablet`
       font-size: 13px;
       padding: 10px;
@@ -62,18 +65,26 @@ const CharityInfo = styled.div`
   overflow: hidden;
 `;
 
-const DescImage = styled.div`
+const DescAndImage = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
-  img {
-    width: 50px;
+  > img {
+    width: 43px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
     ${media.mid`
-      justify-content: flex-start;
+      width: 65px;
+      left: 55px;
+      top: 10px;
   `};
   }
   ${media.mid`
       width: 100%;
+      flex-direction: row;
       justify-content: flex-start;
   `};
   ${media.tablet`
@@ -81,27 +92,31 @@ const DescImage = styled.div`
   `};
 `;
 
+const DescDiv = styled(InfoBox)`
+  margin-top: 80px;
+  ${media.mid`
+    margin: 5px 5px 12px 125px;
+    font-size: 14px;
+  `};
+`;
+
 const SiteLinks = styled.div`
-  position: absolute;
-  bottom: 10px;
-  width: 200px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  margin-top: 10px;
   ${media.mid`
       flex-direction: row;
       width: 100%;
-      justify-content: flex-start;
+      justify-content: flex-end;
   `};
 `;
 
 const SubSiteLink = styled(InfoBox)`
-  width: 80%;
-  height: 15px;
+  width: 60%;
+  height: 16px;
   opacity: 0.9;
   a {
     text-decoration: none;
@@ -131,10 +146,10 @@ const InfoCard = ({ charityInfo }) => {
           <p>{charityInfo.name}</p>
         </NameDiv>
         <CharityInfo>
-          <DescImage>
+          <DescAndImage>
             <img src={charityInfo.logoAbsoluteUrl} />
-            <InfoBox>{charityInfo.description}</InfoBox>
-          </DescImage>
+            <DescDiv>{charityInfo.description}</DescDiv>
+          </DescAndImage>
 
           <InfoBox>{charityInfo.thankyouMessage}</InfoBox>
 
