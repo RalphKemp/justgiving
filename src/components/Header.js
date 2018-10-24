@@ -28,6 +28,9 @@ const HeaderContainer = styled.div`
     left: 45px;
     justify-content: flex-start;
   `};
+  ${media.desktop`
+    left: 57px;
+  `};
 `;
 
 const Header = () => {

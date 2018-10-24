@@ -84,7 +84,7 @@ const DescAndImage = styled.div`
       top: 10px;
     `};
     ${media.tablet`
-      width: 84px;
+      width: 79px;
       left: 61px;
       top: 14px;
     `};
@@ -102,7 +102,7 @@ const DescAndImage = styled.div`
 const DescDiv = styled(InfoBox)`
   margin-top: 80px;
   ${media.mid`
-    margin: 5px 5px 12px 125px;
+    margin: 5px 5px 16px 125px;
     font-size: 15px;
   `};
   ${media.tablet`
@@ -128,7 +128,7 @@ const SubSiteLink = styled(InfoBox)`
   width: 60%;
   height: 16px;
   opacity: 0.8;
-  background-color: ${props => props.purple ? "#b339bb" : "#00772d"};
+  background-color: ${props => (props.purple ? '#b339bb' : '#00772d')};
   a {
     text-decoration: none;
     color: white;
@@ -139,12 +139,15 @@ const SubSiteLink = styled(InfoBox)`
     opacity: 1;
   }
   ${media.mid`
-      width: fit-content;
-      padding-left: 8px;
-      a {
-        font-size: 13px;
-      }
-  }
+    width: fit-content;
+    padding-left: 8px;
+    a {
+      font-size: 13px;
+    }
+    `} ${media.tablet`
+       > a {
+        display: block;
+       }
   `};
 `;
 
