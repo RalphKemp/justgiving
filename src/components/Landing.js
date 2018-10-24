@@ -13,6 +13,7 @@ const LandingContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const ContentContainer = styled.div`
@@ -23,10 +24,10 @@ const ContentContainer = styled.div`
   width: 300px;
   height: auto;
   min-height: 400px;
-  margin: 25px 0px;
+  margin: 120px 0px;
+  position: relative;
   ${media.mid`
       align-items: flex-start;
-      margin: 0px;
       width: 550px;
   `};
   ${media.tablet`
@@ -37,8 +38,8 @@ const ContentContainer = styled.div`
 const Landing = () => {
   return (
     <LandingContainer>
-      <Header />
       <ContentContainer>
+
         <CardsContainer />
       </ContentContainer>
     </LandingContainer>

@@ -5,6 +5,9 @@ import { connect } from 'react-redux';
 import InfoCard from './InfoCard';
 import DonationsCard from './DonationsCard';
 import { media } from '../helpers/sizing';
+import MyCodeLoader from '../helpers/contentLoader';
+import { Transition } from 'react-spring';
+import Header from './Header';
 
 const MainContainer = styled.div`
   width: 90%;
@@ -35,11 +38,24 @@ class CardsContainer extends Component {
     return (
       <MainContainer>
         {this.state.loaded ? (
-          <div>
-            <InfoCard charityInfo={charity} />
-            <DonationsCard donations={donations} />
-          </div>
-        ) : null}
+          <Transition
+            from={{ opacity: 0 }}
+            enter={{ opacity: 1 }}
+            leave={{ opacity: 0 }}
+          >
+            {this.state.loaded
+              ? styles => (
+                  <div style={styles}>
+                    <Header />
+                    <InfoCard charityInfo={charity} />
+                    <DonationsCard donations={donations} />
+                  </div>
+                )
+              : null}
+          </Transition>
+        ) : (
+          <MyCodeLoader />
+        )}
       </MainContainer>
     );
   }
