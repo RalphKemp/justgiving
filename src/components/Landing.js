@@ -8,7 +8,7 @@ const LandingContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
   height: auto;
-  background: linear-gradient(#ffffff, #b52fbd0a);
+  background: linear-gradient(#ffffff, #fef7ff);
   display: flex;
   flex-direction: column;
   justify-content: center;

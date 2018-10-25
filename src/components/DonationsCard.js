@@ -6,7 +6,7 @@ import dateFormat from 'dateformat';
 
 const DonationsCardContainer = styled.div`
   position: relative;
-  background: linear-gradient(#f5f5f5, #ced2d0ed);
+  background: linear-gradient(#f5f5f5, #dcdcdc);
   box-shadow: rgb(93, 93, 93) 0px 2px 7px -1px;
   margin-top: 10px;
   height: auto;

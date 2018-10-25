@@ -7,7 +7,7 @@ import MyCodeLoader from '../helpers/contentLoader';
 
 const InfoCardContainer = styled.div`
   position: relative;
-  background: linear-gradient(#fdfffe, #00772d38);
+  background: linear-gradient(#fdfffe, #cadcd1);
   box-shadow: rgb(66,66,66) 0px 2px 15px -4px;
   height: auto;
   border-radius: 5px;
