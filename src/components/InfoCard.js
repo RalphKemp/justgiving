@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { media } from '../helpers/sizing';
 import MyCodeLoader from '../helpers/contentLoader';
 
-// #b339bb
+// #b339bb - justgiving purple
 
 const InfoCardContainer = styled.div`
   position: relative;
-  background: linear-gradient(#d4d7d5, #00772d38);
-  box-shadow: rgb(93, 93, 93) 0px 2px 7px -1px;
+  background: linear-gradient(#fdfffe, #00772d38);
+  box-shadow: rgb(66,66,66) 0px 2px 15px -4px;
   height: auto;
   border-radius: 5px;
   margin-top: 10px;
@@ -79,9 +79,9 @@ const DescAndImage = styled.div`
     transform: translateX(-50%);
     top: 5px;
     ${media.mid`
-      width: 65px;
-      left: 55px;
-      top: 10px;
+      width: 90px;
+      left: 63px;
+      top: 16px;
     `};
     ${media.tablet`
       width: 79px;

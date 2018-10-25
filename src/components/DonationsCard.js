@@ -6,7 +6,7 @@ import dateFormat from 'dateformat';
 
 const DonationsCardContainer = styled.div`
   position: relative;
-  background-color: #ced2d0;
+  background: linear-gradient(#f5f5f5, #ced2d0ed);
   box-shadow: rgb(93, 93, 93) 0px 2px 7px -1px;
   margin-top: 10px;
   height: auto;
@@ -18,7 +18,11 @@ const DonationsCardContainer = styled.div`
   flex-direction: column;
   padding-top: 10px;
   padding-bottom: 15px;
+  ${media.mid`
+    padding: 0px 13px;
+  `};
   ${media.tablet`
+      padding: 5px 5px 15px 5px;
       width: 40%;
       margin-left: 17px;
   `};
@@ -56,11 +60,15 @@ const IndividualDonation = styled.div`
   color: black;
   margin: 10px 10px 2px 10px;
   border-radius: 5px;
-  padding: 10px;
+  padding: 4px;
   overflow: hidden;
   box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
+  ${media.mid`
+    margin: 10px 30px 2px 30px;
+  `};
   ${media.tablet`
       font-size: 13px;
+      margin: 10px 10px 2px 10px;
   `};
   ${media.desktop`
       font-size: 14px;
@@ -75,13 +83,49 @@ const SubDiv = styled.div`
   flex-direction: column;
 `;
 
+const DateDiv = styled(SubDiv)`
+  text-align: left;
+  font-size: 12px;
+  ${media.mid`
+      font-size: 14px;
+  `};
+`;
+
 const DonationInfo = styled(SubDiv)`
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  ${media.tablet`
+      font-size: 18px;
+  `};
+  > div {
+    display: inline-block;
+    > span {
+      font-size: 23px;
+      color: #b339bb;
+      margin-left: 1px;
+      ${media.mid`
+          font-size: 20px;
+      `};
+      ${media.tablet`
+          font-size: 23px;
+      `};
+    }
+  }
 `;
 
 const DonationMessage = styled(SubDiv)`
   font-style: italic;
+  text-align: right;
+  font-size: 12px;
+  margin-top: 5px;
+  padding: 10px;
+  ${media.mid`
+      font-size: 14px;
+  `};
+  ${media.tablet`
+      padding: 6px;
+      font-size: 13px;
+  `};
 `;
 // with donations passed as props, we can map each donation to an IndividualDonation
 // div. I couldn't figure out why the donationDate was coming back as a different string
@@ -100,11 +144,11 @@ const DonationsCard = ({ donations }) => {
           const donationDate = new Date(parseInt(time)).toString();
           return (
             <IndividualDonation key={uuidv1()}>
-              <SubDiv>
-                {dateFormat(donationDate, 'dddd, mmmm dS, yyyy, h:MM:ss TT')}
-              </SubDiv>
+              <DateDiv>
+                {dateFormat(donationDate, 'dddd, mmmm dS, yyyy')}
+              </DateDiv>
               <DonationInfo>
-                {donation.donorDisplayName} donated £{donation.amount}
+                <div>{donation.donorDisplayName} donated <span>£{donation.amount}</span></div>
               </DonationInfo>
               <DonationMessage>
                 <p> - "{donation.message}"</p>
