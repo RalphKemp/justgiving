@@ -3,23 +3,25 @@ import styled from 'styled-components';
 import { media } from '../helpers/sizing';
 import MyCodeLoader from '../helpers/contentLoader';
 
-// background: linear-gradient(#ffffff, #00772d);
+// #b339bb - justgiving purple
 
 const InfoCardContainer = styled.div`
   position: relative;
-  background: linear-gradient(#d4d7d5, #00772d38);
-  box-shadow: rgb(93, 93, 93) 0px 2px 7px -1px;
+  background: linear-gradient(#fdfffe, #00772d38);
+  box-shadow: rgb(66,66,66) 0px 2px 15px -4px;
   height: auto;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 55px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   padding: 10px 10px 20px 10px;
   ${media.tablet`
       width: 65%;
       padding: 10px;
       margin-right: 5px;
+      height: fit-content;
+      padding-bottom: 14px;
   `};
   ${media.desktop`
       margin-right: 10px;
@@ -30,31 +32,31 @@ const NameDiv = styled.div`
   position: absolute;
   top: -50px;
   left: 60px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
   font-size: 23px;
   margin-top: 10px;
   ${media.mid`
     left: 0px;
-    margin-top: 18px;
+    margin-top: 15px;
   `};
 `;
 
 const InfoBox = styled.div`
   background-color: white;
   border-radius: 5px;
-  padding: 9px;
+  padding: 10px;
   margin: 5px;
   width: fit-content;
   box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
   overflow: hidden;
-  font-size: 13px;
+  font-size: 14px;
   ${media.tablet`
       font-size: 13px;
       padding: 10px;
   `};
   ${media.desktop`
-      font-size: 14px;
+      font-size: 15px;
       padding: 13px;
   `};
 `;
@@ -77,10 +79,15 @@ const DescAndImage = styled.div`
     transform: translateX(-50%);
     top: 5px;
     ${media.mid`
-      width: 65px;
-      left: 55px;
-      top: 10px;
-  `};
+      width: 90px;
+      left: 63px;
+      top: 16px;
+    `};
+    ${media.tablet`
+      width: 79px;
+      left: 61px;
+      top: 14px;
+    `};
   }
   ${media.mid`
       width: 100%;
@@ -95,8 +102,11 @@ const DescAndImage = styled.div`
 const DescDiv = styled(InfoBox)`
   margin-top: 80px;
   ${media.mid`
-    margin: 5px 5px 12px 125px;
-    font-size: 14px;
+    margin: 5px 5px 16px 125px;
+    font-size: 15px;
+  `};
+  ${media.tablet`
+    padding: 12px;
   `};
 `;
 
@@ -117,22 +127,27 @@ const SiteLinks = styled.div`
 const SubSiteLink = styled(InfoBox)`
   width: 60%;
   height: 16px;
-  opacity: 0.9;
+  opacity: 0.8;
+  background-color: ${props => (props.purple ? '#b339bb' : '#00772d')};
   a {
     text-decoration: none;
-    font-weight: 500;
+    color: white;
+    font-weight: 600;
   }
   :hover {
     cursor: pointer;
     opacity: 1;
   }
   ${media.mid`
-      width: fit-content;
-      padding-left: 8px;
-      a {
-        font-size: 13px;
-      }
-  }
+    width: fit-content;
+    padding-left: 8px;
+    a {
+      font-size: 13px;
+    }
+    `} ${media.tablet`
+       > a {
+        display: block;
+       }
   `};
 `;
 
@@ -154,14 +169,14 @@ const InfoCard = ({ charityInfo }) => {
           <InfoBox>{charityInfo.thankyouMessage}</InfoBox>
 
           <SiteLinks>
-            <SubSiteLink>
+            <SubSiteLink purple>
               <a href={charityInfo.profilePageUrl}>View charity page</a>
             </SubSiteLink>
             <SubSiteLink>
               <a href={charityInfo.websiteUrl}>Visit site</a>
             </SubSiteLink>
             <SubSiteLink>
-              <a href={'mailto:' + charityInfo.emailAddress}>contact</a>
+              <a href={'mailto:' + charityInfo.emailAddress}>Contact</a>
             </SubSiteLink>
           </SiteLinks>
         </CharityInfo>
