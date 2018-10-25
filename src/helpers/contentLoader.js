@@ -9,7 +9,7 @@ const StyledLoader = styled.div`
   position: absolute;
   z-index: 1000;
   top: 50%;
-  left: 46%;
+  left: 50%;
 `;
 
 // Basic React spinner to be rendered when content is loading. Very useful when the
