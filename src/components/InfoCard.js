@@ -7,10 +7,9 @@ import MyCodeLoader from '../helpers/contentLoader';
 
 const InfoCardContainer = styled.div`
   position: relative;
-  background: linear-gradient(#fdfffe, #cadcd1);
-  box-shadow: rgb(66,66,66) 0px 2px 15px -4px;
+  background: linear-gradient(#f7f7f7, #cadcd1);
+  box-shadow: rgb(142, 142, 142) 2px 2px 10px -2px;
   height: auto;
-  border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 55px;
   font-family: 'Nunito', sans-serif;
@@ -48,7 +47,7 @@ const InfoBox = styled.div`
   padding: 10px;
   margin: 5px;
   width: fit-content;
-  box-shadow: rgb(93, 93, 93) 2px 2px 7px -3px;
+  box-shadow: rgb(160, 160, 160) 2px 2px 7px -3px;
   overflow: hidden;
   font-size: 14px;
   ${media.tablet`

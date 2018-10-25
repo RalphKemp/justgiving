@@ -7,10 +7,9 @@ import dateFormat from 'dateformat';
 const DonationsCardContainer = styled.div`
   position: relative;
   background: linear-gradient(#f5f5f5, #dcdcdc);
-  box-shadow: rgb(93, 93, 93) 0px 2px 7px -1px;
+  box-shadow: rgb(93,93,93) 2px 2px 9px -3px;
   margin-top: 10px;
   height: auto;
-  border-radius: 5px;
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   color: white;
@@ -59,10 +58,10 @@ const IndividualDonation = styled.div`
   background-color: white;
   color: black;
   margin: 10px 10px 2px 10px;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 4px;
   overflow: hidden;
-  box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
+  box-shadow: rgb(154, 154, 154) 2px 2px 8px -2px;
   ${media.mid`
     margin: 10px 25px 2px 25px;
   `};
