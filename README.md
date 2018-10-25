@@ -13,6 +13,7 @@ The actions are then passed to their different reducers and then we combine redu
 We can then easily map this state to props on our main card container. The donations and charity data are then being passed to both our cards (functional components) as props.
 
 At this stage, once we have access to our basic json data, and it's displaying correctly and has responsive sizing, we can then dive deeper into the design. For this project I have used styled-components, a fantastic module which I find to be the best solution for styling in React.
-From then I simply positioned things where I thought they looked best, added some box-shadowing, border-radius, opacity/hover effects etc. Of course there is also the react spinner, which is displayed before the data is fetched, to let the user know something is actually happening. I have noticed at times the data taking a rather long time to load, which I guess is just the speed of the api's server.
+From then I simply positioned things where I thought they looked best, added some box-shadowing, border-radius, opacity/hover effects etc. Of course there is also the React spinner, which is displayed before the data is fetched, to let the user know something is actually happening. I have noticed at times the data taking a rather long time to load, which I guess is just the speed of the api's server.
+Once loaded, the content fades in using React spring, an easy to use animation library. 
 
 I hope you like what I've made!
