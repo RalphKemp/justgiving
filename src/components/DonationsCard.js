@@ -19,7 +19,7 @@ const DonationsCardContainer = styled.div`
   padding-top: 10px;
   padding-bottom: 15px;
   ${media.mid`
-    padding: 0px 13px;
+    padding: 10px;
   `};
   ${media.tablet`
       padding: 5px 5px 15px 5px;
@@ -64,7 +64,7 @@ const IndividualDonation = styled.div`
   overflow: hidden;
   box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
   ${media.mid`
-    margin: 10px 30px 2px 30px;
+    margin: 10px 25px 2px 25px;
   `};
   ${media.tablet`
       font-size: 13px;

@@ -48,7 +48,7 @@ const InfoBox = styled.div`
   padding: 10px;
   margin: 5px;
   width: fit-content;
-  box-shadow: rgb(93, 93, 93) 2px 2px 7px -2px;
+  box-shadow: rgb(93, 93, 93) 2px 2px 7px -3px;
   overflow: hidden;
   font-size: 14px;
   ${media.tablet`
@@ -143,6 +143,7 @@ const SubSiteLink = styled(InfoBox)`
     padding-left: 8px;
     a {
       font-size: 13px;
+      display: block;
     }
     `} ${media.tablet`
        > a {
