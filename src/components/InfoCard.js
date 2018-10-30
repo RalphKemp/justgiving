@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../helpers/sizing';
-import MyCodeLoader from '../helpers/contentLoader';
 
 // #b339bb - justgiving purple
 
@@ -162,7 +161,7 @@ export const InfoCard = ({ charityInfo }) => {
         </NameDiv>
         <CharityInfo>
           <DescAndImage>
-            <img src={charityInfo.logoAbsoluteUrl} />
+            <img src={charityInfo.logoAbsoluteUrl} alt="charity-logo" />
             <DescDiv>{charityInfo.description}</DescDiv>
           </DescAndImage>
 
