@@ -9,7 +9,7 @@ exports[`DonationsCard renders correctly 1`] = `
   </styled.div>
   <styled.div>
     <styled.div
-      key="70c4f9e0-dbde-11e8-8773-41580b3e148c"
+      key="Thu Jan 01 1970 01:00:02 GMT+0100 (Greenwich Mean Time)"
     >
       <Styled(styled.div)>
         Thursday, January 1st, 1970
@@ -33,7 +33,7 @@ exports[`DonationsCard renders correctly 1`] = `
       </Styled(styled.div)>
     </styled.div>
     <styled.div
-      key="70c520f0-dbde-11e8-8773-41580b3e148c"
+      key="Thu Jan 01 1970 01:00:02 GMT+0100 (Greenwich Mean Time)"
     >
       <Styled(styled.div)>
         Thursday, January 1st, 1970
@@ -57,7 +57,7 @@ exports[`DonationsCard renders correctly 1`] = `
       </Styled(styled.div)>
     </styled.div>
     <styled.div
-      key="70c54800-dbde-11e8-8773-41580b3e148c"
+      key="Thu Jan 01 1970 01:00:02 GMT+0100 (Greenwich Mean Time)"
     >
       <Styled(styled.div)>
         Thursday, January 1st, 1970
@@ -81,7 +81,7 @@ exports[`DonationsCard renders correctly 1`] = `
       </Styled(styled.div)>
     </styled.div>
     <styled.div
-      key="70c54801-dbde-11e8-8773-41580b3e148c"
+      key="Thu Jan 01 1970 01:00:02 GMT+0100 (Greenwich Mean Time)"
     >
       <Styled(styled.div)>
         Thursday, January 1st, 1970

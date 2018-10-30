@@ -11,6 +11,7 @@ exports[`InfoCard renders correctly 1`] = `
     <styled.div>
       <styled.div>
         <img
+          alt="charity-logo"
           src="url"
         />
         <Styled(styled.div)>

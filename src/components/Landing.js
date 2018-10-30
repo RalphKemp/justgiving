@@ -1,6 +1,5 @@
 import React from 'react';
 import CardsContainer from './CardsContainer';
-import Header from './Header';
 import styled from 'styled-components';
 import { media } from '../helpers/sizing';
 

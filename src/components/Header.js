@@ -36,7 +36,7 @@ const HeaderContainer = styled.div`
 const Header = () => {
   return (
     <HeaderContainer>
-      <img src={logoImage} />
+      <img src={logoImage} alt="JGlogo" />
     </HeaderContainer>
   );
 };

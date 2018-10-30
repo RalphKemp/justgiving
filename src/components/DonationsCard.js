@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../helpers/sizing';
-import uuidv1 from 'uuid/v1';
 import dateFormat from 'dateformat';
 
 const DonationsCardContainer = styled.div`
@@ -142,7 +141,7 @@ export const DonationsCard = ({ donations }) => {
           const time = donation.donationDate.substr(6, 13);
           const donationDate = new Date(parseInt(time)).toString();
           return (
-            <IndividualDonation key={uuidv1()}>
+            <IndividualDonation key={donationDate}>
               <DateDiv>
                 {dateFormat(donationDate, 'dddd, mmmm dS, yyyy')}
               </DateDiv>
