@@ -44,6 +44,7 @@ export class CardsContainer extends Component {
   render() {
     const { charity, donations } = this.props;
     console.log(donations);
+    console.log(charity);
     return (
       <MainContainer>
         {this.state.loaded ? (

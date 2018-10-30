@@ -131,7 +131,7 @@ const DonationMessage = styled(SubDiv)`
 // from the json data, so here I have to subStr() and then parse that in a new Date object.
 // it's then passed into dateFormat to make it look nicer.
 
-const DonationsCard = ({ donations }) => {
+export const DonationsCard = ({ donations }) => {
   return (
     <DonationsCardContainer>
       <DonationsHeader>

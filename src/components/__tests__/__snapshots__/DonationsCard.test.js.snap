@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DonationsCard renders correctly 1`] = `
+<styled.div>
+  <styled.div>
+    <p>
+      Recent Donations
+    </p>
+  </styled.div>
+  <styled.div>
+    <styled.div
+      key="70c4f9e0-dbde-11e8-8773-41580b3e148c"
+    >
+      <Styled(styled.div)>
+        Thursday, January 1st, 1970
+      </Styled(styled.div)>
+      <Styled(styled.div)>
+        <div>
+          ralph
+           donated 
+          <span>
+            £
+            55
+          </span>
+        </div>
+      </Styled(styled.div)>
+      <Styled(styled.div)>
+        <p>
+           - "
+          Our deepest condolences
+          "
+        </p>
+      </Styled(styled.div)>
+    </styled.div>
+    <styled.div
+      key="70c520f0-dbde-11e8-8773-41580b3e148c"
+    >
+      <Styled(styled.div)>
+        Thursday, January 1st, 1970
+      </Styled(styled.div)>
+      <Styled(styled.div)>
+        <div>
+          ralph
+           donated 
+          <span>
+            £
+            55
+          </span>
+        </div>
+      </Styled(styled.div)>
+      <Styled(styled.div)>
+        <p>
+           - "
+          Our deepest condolences
+          "
+        </p>
+      </Styled(styled.div)>
+    </styled.div>
+    <styled.div
+      key="70c54800-dbde-11e8-8773-41580b3e148c"
+    >
+      <Styled(styled.div)>
+        Thursday, January 1st, 1970
+      </Styled(styled.div)>
+      <Styled(styled.div)>
+        <div>
+          ralph
+           donated 
+          <span>
+            £
+            55
+          </span>
+        </div>
+      </Styled(styled.div)>
+      <Styled(styled.div)>
+        <p>
+           - "
+          Our deepest condolences
+          "
+        </p>
+      </Styled(styled.div)>
+    </styled.div>
+    <styled.div
+      key="70c54801-dbde-11e8-8773-41580b3e148c"
+    >
+      <Styled(styled.div)>
+        Thursday, January 1st, 1970
+      </Styled(styled.div)>
+      <Styled(styled.div)>
+        <div>
+          ralph
+           donated 
+          <span>
+            £
+            55
+          </span>
+        </div>
+      </Styled(styled.div)>
+      <Styled(styled.div)>
+        <p>
+           - "
+          Our deepest condolences
+          "
+        </p>
+      </Styled(styled.div)>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
