@@ -16,4 +16,6 @@ At this stage, once we have access to our basic json data, and it's displaying c
 From then I simply positioned things where I thought they looked best, added some box-shadowing, border-radius, opacity/hover effects etc. Of course there is also the React spinner, which is displayed before the data is fetched, to let the user know something is actually happening. I have noticed at times the data taking a rather long time to load, which I guess is just the speed of the api's server.
 Once loaded, the content fades in using React spring, an easy to use animation library. 
 
+I have also used jest and Enzyme for some basic React testing, using snapshots. I'm currently finding the best method for testing props. 
+
 I hope you like what I've made!
