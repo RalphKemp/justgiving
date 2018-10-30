@@ -20,7 +20,9 @@ const MainContainer = styled.div`
   }
 `;
 
-class CardsContainer extends Component {
+// exporting here for tests of component without state.
+
+export class CardsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { loaded: false };
