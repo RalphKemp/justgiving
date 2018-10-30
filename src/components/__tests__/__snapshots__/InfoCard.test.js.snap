@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoCard renders correctly 1`] = `
+<styled.div>
+  <div>
+    <styled.div>
+      <p>
+        charity
+      </p>
+    </styled.div>
+    <styled.div>
+      <styled.div>
+        <img
+          src="url"
+        />
+        <Styled(styled.div)>
+          this is the desc
+        </Styled(styled.div)>
+      </styled.div>
+      <styled.div>
+        hello
+      </styled.div>
+      <styled.div>
+        <Styled(styled.div)
+          purple={true}
+        >
+          <a
+            href="url2"
+          >
+            View charity page
+          </a>
+        </Styled(styled.div)>
+        <Styled(styled.div)>
+          <a
+            href="url3"
+          >
+            Visit site
+          </a>
+        </Styled(styled.div)>
+        <Styled(styled.div)>
+          <a
+            href="mailto:@@"
+          >
+            Contact
+          </a>
+        </Styled(styled.div)>
+      </styled.div>
+    </styled.div>
+  </div>
+</styled.div>
+`;

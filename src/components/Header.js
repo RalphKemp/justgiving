@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { media } from '../helpers/sizing';
 
-const image =
+export const logoImage =
   'https://www.jg-cdn.com/chrome/3e7a4dc9d866fda15331414a9072da97.svg';
 
 const HeaderContainer = styled.div`
@@ -36,7 +36,7 @@ const HeaderContainer = styled.div`
 const Header = () => {
   return (
     <HeaderContainer>
-      <img src={image} />
+      <img src={logoImage} />
     </HeaderContainer>
   );
 };
