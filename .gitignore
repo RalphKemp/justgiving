@@ -4,9 +4,6 @@
 /node_modules
 
 # testing
-/__tests__
-
-# testing
 /coverage
 
 # production
